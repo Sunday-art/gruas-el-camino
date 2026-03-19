@@ -3,21 +3,16 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* HERO */
+/* HERO MEJORADO */
 .hero {
-    background: url('img/foto2.jpeg') center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+                url('img/foto2.jpeg') center/cover no-repeat;
     height: 90vh;
     position: relative;
     color: white;
 }
 
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.35);
-}
-
+/* IMPORTANTE: quitamos overlay */
 .content {
     position: relative;
     text-align: center;
