@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Grúas El Camino | Auxilio Vial Urgente 24/7</title>
+
+<meta name="description" content="¿Necesitas una grúa urgente? Llegamos rápido en San Luis Potosí. Servicio 24/7. Llama o envía WhatsApp ahora.">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- BOTÓN FLOTANTE -->
+<a href="https://wa.me/524443338273" class="whatsapp-float">💬</a>
+
+<!-- HERO -->
+<header class="hero">
+    <div class="overlay"></div>
+
+    <div class="content">
+        <img src="img/logo-azul.png" class="logo">
+
+        <h1>¿Necesitas una grúa AHORA?</h1>
+        <p class="sub">Llegamos en minutos • Servicio 24/7 • Atención inmediata</p>
+
+        <div class="buttons">
+            <a href="https://wa.me/524443338273" class="btn whatsapp">📲 WhatsApp</a>
+            <a href="tel:4443338273" class="btn call">📞 Llamar</a>
+        </div>
+    </div>
+</header>
+
+<!-- PRUEBA SOCIAL -->
+<section class="trust">
+    <p>✔ Más de 500 servicios realizados</p>
+    <p>✔ Atención rápida y segura</p>
+    <p>✔ Clientes satisfechos</p>
+</section>
+
+<!-- SERVICIOS -->
+<section class="servicios">
+    <h2>¿En qué te ayudamos?</h2>
+
+    <div class="cards">
+        <div class="card">🚗 Arrastre de autos</div>
+        <div class="card">🚙 Camionetas</div>
+        <div class="card">🚛 Vehículos pesados</div>
+        <div class="card">🌎 Traslados foráneos</div>
+        <div class="card">⚙️ Maquinaria ligera</div>
+        <div class="card">🛠 Auxilio vial 24/7</div>
+    </div>
+</section>
+
+<!-- GALERÍA -->
+<section class="galeria">
+    <h2>Trabajos reales</h2>
+
+    <div class="grid">
+        <img src="img/foto1.jpg">
+        <img src="img/foto2.jpg">
+        <img src="img/foto3.jpg">
+        <img src="img/foto4.jpg">
+    </div>
+</section>
+
+<!-- MAPA -->
+<section class="mapa">
+    <h2>Estamos cerca de ti</h2>
+
+    <iframe src="https://maps.google.com/maps?q=San%20Luis%20Potosí&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta">
+    <h2>No esperes más</h2>
+    <p>Tu problema se resuelve en minutos</p>
+
+    <a href="https://wa.me/524443338273" class="btn whatsapp big">
+        🚀 Solicitar grúa ahora
+    </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Grúas El Camino</p>
+</footer>
+
+</body>
+</html>
+🎨 STYLE.CSS (MEJORADO PARA CONVERSIÓN)
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* HERO */
+.hero {
+    background: url('img/foto1.jpg') center/cover no-repeat;
+    height: 90vh;
+    position: relative;
+    color: white;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.65);
+}
+
+.content {
+    position: relative;
+    text-align: center;
+    top: 30%;
+    padding: 20px;
+}
+
+.logo {
+    width: 120px;
+}
+
+h1 {
+    font-size: 2.4em;
+}
+
+.sub {
+    font-size: 1.1em;
+}
+
+/* BOTONES */
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 14px 24px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.big { font-size: 1.2em; }
+
+.whatsapp { background: #25D366; }
+.call { background: #007BFF; }
+
+/* BOTÓN FLOTANTE */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    font-size: 24px;
+    padding: 16px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+/* CONFIANZA */
+.trust {
+    text-align: center;
+    padding: 20px;
+    background: #f4f4f4;
+    font-weight: bold;
+}
+
+/* SECCIONES */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* SERVICIOS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* GALERIA */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+}
+
+.grid img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* MAPA */
+iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+/* CTA */
+.cta {
+    background: #111;
+    color: white;
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    color: white;
+    padding: 15px;
+}
