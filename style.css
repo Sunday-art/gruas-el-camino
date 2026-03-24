@@ -3,69 +3,49 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* HERO MEJORADO */
+/* HERO */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-                url('img/foto3.jpeg') center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('img/foto1.jpeg') center/cover no-repeat;
     height: 90vh;
-    position: relative;
     color: white;
-}
-
-/* IMPORTANTE: quitamos overlay */
-.content {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    top: 30%;
-    padding: 20px;
 }
 
-.logo {
-    width: 120px;
+.content h1 {
+    font-size: 2.5em;
 }
 
-h1 {
-    font-size: 2.4em;
-}
-
-.sub {
-    font-size: 1.1em;
-}
-
-/* BOTONES */
 .btn {
     display: inline-block;
     margin: 10px;
-    padding: 14px 24px;
+    padding: 15px 25px;
     border-radius: 8px;
-    color: white;
     text-decoration: none;
+    color: white;
     font-weight: bold;
 }
 
-.big { font-size: 1.2em; }
+.big {
+    font-size: 1.2em;
+}
 
-.whatsapp { background: #25D366; }
-.call { background: #007BFF; }
-
-/* BOTÓN FLOTANTE */
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+.whatsapp {
     background: #25D366;
-    color: white;
-    font-size: 24px;
-    padding: 16px;
-    border-radius: 50%;
-    text-decoration: none;
+}
+
+.call {
+    background: #007BFF;
 }
 
 /* CONFIANZA */
 .trust {
-    text-align: center;
-    padding: 20px;
     background: #f4f4f4;
+    text-align: center;
+    padding: 15px;
     font-weight: bold;
 }
 
@@ -75,15 +55,15 @@ section {
     text-align: center;
 }
 
-/* SERVICIOS */
+/* CARDS */
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
 }
 
 .card {
-    background: #fff;
+    background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -110,13 +90,13 @@ iframe {
 
 /* CTA */
 .cta {
-    background: #111;
+    background: black;
     color: white;
 }
 
 /* FOOTER */
 footer {
-    background: black;
+    background: #111;
     color: white;
     padding: 15px;
 }
