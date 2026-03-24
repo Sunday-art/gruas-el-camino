@@ -1,249 +1,344 @@
-/* --- ESTILOS GENERALES --- */
-body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-    background-color: #fff;
+/* --- ESTILOS GENERALES (Paleta Premium) --- */
+:root {
+    --bg-black: #050607; /* Negro profundo */
+    --concrete-gray: #7a7c80; /* Gris de los puentes */
+    --concrete-light: #b5b8bd; /* Gris claro metálico */
+    --text-white: #ffffff;
+    --brand-gold-metallic: #d9b85c; /* Dorado metálico satinado */
+    --brand-gold-dark: #a68a3f; /* Dorado metálico más oscuro */
 }
 
-/* --- HEADER MEJORADO (Cambio 2 y 3 integrados) --- */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-white);
+    background-color: var(--bg-black);
+    letter-spacing: -0.3px;
+}
+
+/* --- HEADER ADAPTADO --- */
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 15px 30px; /* Más espacio a los lados */
-    background: #111; /* Fondo oscuro profesional */
-    border-bottom: 4px solid #FFD700; /* Línea dorada gruesa abajo */
-    position: sticky; /* Se queda fijo arriba al hacer scroll */
+    padding: 20px 0;
+    background: rgba(0,0,0,0.9);
+    border-bottom: 3px solid var(--concrete-gray); /* Línea gris como el puente */
+    position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-.logo-text {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900; /* Máximo grosor */
-    font-size: 2rem; /* Tamaño grande y llamativo */
-    color: #FFD700; /* Amarillo/Dorado vibrante */
+.header-logo-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.logo-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo-main-text {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--text-white);
     text-transform: uppercase;
-    letter-spacing: 1.5px; /* Espaciado elegante */
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* Sombra para profundidad */
+    line-height: 1;
 }
 
-/* Efecto hover opcional para el logo */
-.logo-text:hover {
-    color: white;
-    transition: 0.3s;
-    cursor: pointer;
+.logo-sub-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--brand-gold-metallic); /* Dorado metálico */
 }
 
-/* --- HERO - Imagen Clara y Texto Arriba (Cambio 1 integrado) --- */
-.hero {
-    height: 85vh; /* Un poco menos de altura para móvil */
+.header-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.header-tagline {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--brand-gold-metallic);
+    letter-spacing: 1.5px;
+}
+
+.header-phone {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--text-white);
+    text-decoration: none;
+    line-height: 1;
+}
+
+.header-247 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--concrete-light);
+}
+
+/* --- HERO CON TU NUEVA IMAGEN DE FONDO --- */
+.hero-image {
+    height: 95vh;
+    /* Reemplaza 'img/foto_grua_puentes.jpeg' por la NUEVA FOTO que subiste */
     background: url('img/foto23.jpeg') center/cover no-repeat;
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Mueve el recuadro HACIA ARRIBA */
-    padding-top: 80px; /* Distancia desde el tope */
+    align-items: flex-end; /* Texto abajo, como el letrero de la foto */
+    padding: 0 0 10vh 0; /* Espacio desde abajo */
 }
 
-.overlay {
+.overlay-premium {
     position: absolute;
     width: 100%;
     height: 100%;
-    /* NEBLINA ELIMINADA: Usamos un tinte casi invisible (0.05) solo para legibilidad mínima */
-    background: rgba(0,0,0,0.05); 
+    /* Degradado sutil de negro arriba a transparente abajo para que la grúa se vea nítida */
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0) 80%);
+    z-index: 1;
 }
 
-.hero-box {
+.hero-content {
     position: relative;
-    background: rgba(0,0,0,0.5); /* Fondo sutil para que el texto resalte */
-    padding: 35px;
-    border-radius: 20px;
+    z-index: 2;
     text-align: center;
-    color: white;
-    max-width: 85%;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    max-width: 850px;
+    background: rgba(0,0,0,0.6); /* Fondo sutil al cuadro de texto */
+    padding: 40px;
+    border-radius: 20px;
 }
 
-.hero-box h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 3.2rem; /* Título ENORME y llamativo */
+/* Títulos Premium */
+.hero-question {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text-white);
+    margin-bottom: 5px;
+}
+
+.hero-title {
+    font-size: 4rem; /* Muy grande y limpio */
+    font-weight: 900;
+    color: var(--brand-gold-metallic); /* Dorado metálico satinado */
     text-transform: uppercase;
-    color: #FFD700; /* Amarillo "Grúa" */
     margin: 0;
-    text-shadow: 3px 3px 8px rgba(0,0,0,0.9);
-    line-height: 1.1;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    line-height: 1;
 }
 
-.hero-box p {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin: 15px 0 5px 0;
+/* Lista de Servicios Directa */
+.services-list {
+    list-style: none;
+    padding: 0;
+    margin: 40px auto;
+    max-width: 450px;
+    text-align: left;
+}
+
+.services-list li {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-white);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Iconos Dorados Metálicos */
+.services-list li span.dot {
+    width: 12px;
+    height: 12px;
+    background-color: var(--brand-gold-metallic);
+    border-radius: 50%;
+    display: block;
+    box-shadow: 0 0 10px rgba(217, 184, 92, 0.5);
+}
+
+/* Título final premium */
+.hero-tagline {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--text-white); /* Blanco Puro */
+    text-transform: uppercase;
+    margin: 40px 0 0 0;
     text-shadow: 2px 2px 5px rgba(0,0,0,1);
 }
 
-.sub-hero {
-    font-size: 1.2rem !important;
-    font-weight: normal !important;
-    opacity: 0.95;
-    margin-top: 0 !important;
+.hero-priority {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--concrete-light);
+    opacity: 0.9;
+    margin-top: 5px;
 }
 
-/* --- BOTONES Y ACCIONES --- */
+/* --- BOTONES DEL HERO (Refinados y Metálicos) --- */
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 50px 0;
+}
+
 .btn {
-    display: inline-block;
-    padding: 15px 25px;
-    margin: 10px 8px;
-    border-radius: 10px;
-    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    padding: 20px;
+    border-radius: 12px;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
+    font-weight: 900;
+    text-transform: uppercase;
     transition: 0.3s;
     border: none;
 }
 
-.small { 
-    padding: 10px 18px; 
-    font-size: 0.9rem;
-    margin: 0;
+/* Botón Dorado Metálico */
+.btn.premium {
+    background-color: var(--brand-gold-metallic); /* Fondo dorado satinado */
+    color: #000000; /* Texto negro para contraste */
+    box-shadow: 0 8px 15px rgba(217, 184, 92, 0.3);
 }
 
-.whatsapp { background: #25D366; }
-.call { background: #007BFF; }
-
-.whatsapp:hover, .call:hover { 
-    transform: scale(1.05); 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+.btn-text {
+    font-size: 1.3rem;
 }
 
-/* --- SECCIONES Y DISEÑO GRID --- */
+.btn-phone {
+    font-size: 1.8rem;
+    line-height: 1.1;
+}
+
+/* Botón WhatsApp */
+.btn.whatsapp {
+    background-color: #25D366; /* WhatsApp mantiene su verde */
+    color: var(--text-white);
+    font-size: 1.1rem;
+    height: auto;
+    flex-direction: row;
+    padding: 12px 20px;
+}
+
+.btn.premium:hover {
+    transform: translateY(-3px);
+    background-color: var(--brand-gold-dark);
+}
+
+.hero-availability {
+    font-size: 1rem;
+    color: var(--concrete-light);
+    opacity: 0.7;
+}
+
+/* --- OTRAS SECCIONES (Adaptadas al estilo Premium) --- */
 section { 
-    padding: 60px 20px; 
+    padding: 100px 20px; 
     text-align: center; 
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.2rem;
+    font-size: 2.8rem;
+    font-weight: 900;
     text-transform: uppercase;
-    color: #111;
-    margin-bottom: 40px;
+    color: var(--text-white);
+    margin-bottom: 60px;
 }
 
+/* Tarjetas refinadas */
+.card {
+    background: #111;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #222;
+}
+
+/* Galería Premium */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-}
-
-/* --- TARJETAS (Servicios/Testimonios) --- */
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card img { 
-    width: 100%; 
-    height: 200px;
-    object-fit: cover; /* Asegura que las fotos no se deformen */
-    border-radius: 12px; 
-    display: block; 
-    margin-bottom: 15px;
-}
-
-.card h3 { margin: 10px 0 0 0; font-size: 1.4rem; }
-
-/* --- CONFIANZA, GALERÍA, TESTIMONIOS --- */
-.trust { 
-    background-color: #FFD700; 
-    color: #111; 
-    font-weight: bold; 
-    font-size: 1.2rem; 
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
 .gallery img { 
-    height: 250px; 
+    width: 100%;
+    height: 280px; 
     object-fit: cover; 
-    border-radius: 10px; 
+    border-radius: 15px; 
+    border: 3px solid #111;
 }
 
-.testimonios { background: #f9f9f9; }
-.testimony { font-style: italic; color: #555; }
-
-/* --- OTROS --- */
-iframe { width: 100%; height: 400px; border-radius: 15px; border: none; }
-.cta { background: #111; color: white; max-width: 100%; }
-.cta h2 { color: white; }
-.cta p { font-size: 1.2rem; opacity: 0.9; }
-
-.pagos p { font-size: 1.3rem; }
-
-.redes { padding: 50px; }
-.fb-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-    background: #1877f2;
-    color: white;
-    padding: 15px 25px;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 1.1rem;
+/* Sección de testimonios (fondo gris concreto) */
+.testimonios { 
+    background-color: #080a0d; 
+    background-image: linear-gradient(to top, #080a0d, #0d0f12);
 }
-.fb-link img { width: 28px; height: 28px; }
 
-/* --- BOTÓN FLOTANTE --- */
+/* Sección CTA Final Premium (Inspirada en el letrero metálico) */
+.cta-premium {
+    background-color: #050607;
+    background-image: linear-gradient(135deg, #050607, #0d0f12);
+    border-top: 5px solid var(--brand-gold-metallic);
+    color: var(--text-white);
+}
+
+.cta-premium h2 { color: var(--text-white); }
+.cta-premium p { font-size: 1.4rem; color: var(--concrete-light); max-width: 600px; margin: 0 auto 50px auto; }
+
+/* Botón alternativo para el CTA final */
+.premium-alt {
+    flex-direction: row;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    width: auto;
+}
+
+/* --- BOTÓN FLOTANTE (Dorado Metálico) --- */
 .float {
     position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background: #25D366;
-    color: white;
-    width: 65px;
-    height: 65px;
+    bottom: 35px;
+    right: 35px;
+    background: var(--brand-gold-metallic); /* Dorado metálico satinado */
+    color: #000000; /* Texto negro */
+    width: 75px;
+    height: 75px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    font-size: 35px;
-    box-shadow: 3px 3px 15px rgba(0,0,0,0.3);
+    font-size: 38px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
     z-index: 2000;
-    transition: 0.3s;
 }
-.float:hover { transform: scale(1.1); }
 
 /* --- FOOTER --- */
 footer { 
     background: #000; 
-    color: rgba(255,255,255,0.7); 
-    padding: 25px; 
+    color: rgba(255,255,255,0.5); 
+    padding: 40px; 
     text-align: center; 
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
 /* --- RESPONSIVO PARA MÓVILES --- */
 @media (max-width: 768px) {
-    .header { padding: 10px 15px; }
-    .logo-text { font-size: 1.4rem; }
-    .hero { height: 70vh; padding-top: 50px; }
-    .hero-box h1 { font-size: 2.2rem; }
-    .hero-box p { font-size: 1.3rem; }
-    .hero-box { padding: 20px; }
-    .btn { padding: 12px 18px; font-size: 1rem; }
+    .header-logo-container { flex-direction: column; gap: 10px; text-align: center;}
+    .header-contact { align-items: center;}
+    .logo-main-text { font-size: 1.8rem;}
+    .hero-title { font-size: 2.8rem;}
+    .services-list li { font-size: 1.2rem;}
+    .hero-tagline { font-size: 1.8rem;}
+    .btn { width: 100%; }
 }
-
