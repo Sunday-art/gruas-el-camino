@@ -1,135 +1,76 @@
-/* --- CONFIGURACIÓN BASE --- */
+/* --- BASE --- */
 * { box-sizing: border-box; }
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #000;
-    color: #fff;
-    line-height: 1.6;
-}
+body { margin: 0; font-family: 'Montserrat', sans-serif; background: #000; color: #fff; }
 
-/* --- CABECERA --- */
-.header {
-    background-color: #000;
-    border-bottom: 4px solid #FFD700;
-    padding: 15px 5%;
-}
-.header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.logo-main { font-size: 2.2rem; font-weight: 900; display: block; line-height: 0.9; }
-.logo-sub { color: #FFD700; font-weight: 700; font-size: 1.2rem; }
-.phone-link { color: #fff; text-decoration: none; font-size: 1.6rem; font-weight: 900; display: block; }
-.status-247 { color: #FFD700; font-size: 0.8rem; font-weight: bold; display: block; text-align: right; }
+/* --- HEADER --- */
+.header { background: #000; border-bottom: 3px solid #FFD700; padding: 10px 5%; }
+.header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.logo-main { font-size: 1.8rem; font-weight: 900; line-height: 0.9; display: block; }
+.logo-sub { color: #FFD700; font-weight: 700; font-size: 1rem; }
+.phone-link { color: #fff; text-decoration: none; font-size: 1.4rem; font-weight: 900; }
+.status-247 { color: #FFD700; font-size: 0.7rem; font-weight: bold; display: block; text-align: right; }
 
-/* --- HERO (FOTO 23) --- */
+/* --- HERO: SIN NIEBLA Y TEXTO A LA IZQUIERDA --- */
 .hero {
-    height: 90vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('img/foto23.jpeg') center/cover no-repeat;
+    height: 85vh;
+    /* Usamos un degradado que SOLO oscurece la izquierda para leer el texto */
+    background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%), 
+                url('img/foto23.jpeg') center/cover no-repeat;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-}
-.hero-top { font-size: 1.4rem; margin: 0; }
-.hero-title { font-size: 3.8rem; color: #FFD700; text-transform: uppercase; margin: 5px 0; line-height: 1; }
-.hero-list { list-style: none; padding: 0; margin: 25px auto; max-width: 450px; text-align: left; }
-.hero-list li { font-size: 1.3rem; font-weight: bold; margin-bottom: 12px; }
-.hero-tagline { font-size: 2.2rem; color: #FFD700; margin-top: 35px; text-transform: uppercase; }
-.hero-motto { font-size: 1.2rem; opacity: 0.9; }
-
-/* --- BOTONES --- */
-.hero-actions { display: flex; flex-direction: column; gap: 15px; align-items: center; margin-top: 30px; }
-.btn { 
-    text-decoration: none; 
-    padding: 18px 0; 
-    width: 300px; 
-    border-radius: 12px; 
-    font-weight: 900; 
-    font-size: 1.1rem; 
-    text-align: center;
-    transition: transform 0.2s;
-}
-.btn-yellow { background-color: #FFD700; color: #000; }
-.btn-whatsapp { background-color: #25D366; color: #fff; }
-.btn:hover { transform: scale(1.05); }
-
-/* --- SECCIÓN GALERÍA (EL ARREGLO) --- */
-.gallery-section { padding: 80px 5%; background-color: #0a0a0a; }
-.section-title { font-size: 2.5rem; text-align: center; margin-bottom: 50px; text-transform: uppercase; }
-
-.photo-grid {
-    display: grid;
-    /* Crea columnas automáticas que no bajan de 280px */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px; /* Espacio firme entre fotos */
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
-.photo-grid img {
-    width: 100%;
-    height: 280px; /* Altura uniforme */
-    object-fit: cover; /* Ajusta la foto sin deformarla */
-    border-radius: 15px;
-    border: 3px solid #1a1a1a;
-    transition: border-color 0.3s;
+.hero-wrapper { width: 90%; max-width: 1200px; margin: 0 auto; }
+
+.hero-card { 
+    max-width: 380px; /* Más pequeño para no tapar la grúa */
+    text-align: left;
 }
-.photo-grid img:hover { border-color: #FFD700; }
+
+.hero-q { font-size: 1.1rem; margin: 0; font-weight: 400; }
+.hero-t { font-size: 2.5rem; color: #FFD700; text-transform: uppercase; margin: 5px 0 20px 0; line-height: 1; }
+.hero-items { list-style: none; padding: 0; margin-bottom: 25px; }
+.hero-items li { font-size: 1rem; font-weight: 700; margin-bottom: 8px; text-shadow: 1px 1px 3px #000; }
+.hero-tag { font-size: 1.4rem; color: #FFD700; margin-bottom: 20px; }
+
+/* --- BOTONES HERO --- */
+.hero-btns { display: flex; flex-direction: column; gap: 10px; }
+.btn-y, .btn-w { 
+    text-decoration: none; padding: 12px; border-radius: 8px; 
+    text-align: center; font-weight: 900; font-size: 0.9rem; 
+}
+.btn-y { background: #FFD700; color: #000; }
+.btn-w { background: #25D366; color: #fff; }
 
 /* --- TESTIMONIOS --- */
-.testimonials { padding: 80px 5%; }
-.testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; }
-.t-card { background: #111; padding: 30px; border-radius: 15px; border-left: 5px solid #FFD700; font-style: italic; }
+.testimonials { padding: 60px 5%; text-align: center; }
+.title-sec { font-size: 2rem; text-transform: uppercase; margin-bottom: 40px; color: #FFD700; }
+.test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.t-item { background: #111; padding: 25px; border-radius: 12px; border-left: 4px solid #FFD700; font-style: italic; font-size: 0.9rem; }
 
-/* --- REDES SOCIALES --- */
-.social-section { text-align: center; padding: 60px 5%; background-color: #0a0a0a; }
-.facebook-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    background-color: #1877f2;
-    color: #fff;
-    padding: 15px 35px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2rem;
+/* --- GALERÍA (Mantenemos lo que te gustó) --- */
+.gallery-section { padding: 60px 5%; background: #0a0a0a; text-align: center; }
+.photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; max-width: 1200px; margin: 0 auto; }
+.photo-grid img { width: 100%; height: 250px; object-fit: cover; border-radius: 10px; border: 2px solid #222; }
+
+/* --- FACEBOOK MINI --- */
+.fb-section { padding: 40px; text-align: center; }
+.fb-mini-link { 
+    display: inline-flex; align-items: center; gap: 10px; 
+    text-decoration: none; color: #fff; font-weight: bold; 
+    background: rgba(24, 119, 242, 0.2); padding: 10px 20px; border-radius: 50px;
+    border: 1px solid #1877f2; transition: 0.3s;
 }
-.facebook-button img { width: 30px; height: 30px; }
+.fb-mini-link:hover { background: #1877f2; }
+.fb-mini-link img { width: 20px; height: 20px; }
 
-/* --- COMPONENTES FLOTANTES --- */
-.whatsapp-float {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #25D366;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 35px;
-    text-decoration: none;
-    z-index: 1000;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-}
+/* --- FLOTANTE --- */
+.whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; text-decoration: none; z-index: 1000; }
 
-footer { text-align: center; padding: 40px; opacity: 0.5; font-size: 0.9rem; }
+footer { padding: 30px; text-align: center; opacity: 0.4; font-size: 0.8rem; }
 
-/* --- RESPONSIVO --- */
+/* MÓVIL */
 @media (max-width: 768px) {
-    .hero-title { font-size: 2.5rem; }
-    .header-container { flex-direction: column; gap: 10px; }
-    .header-info { text-align: center; }
-    .status-247 { text-align: center; }
-    .photo-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; }
-    .photo-grid img { height: 200px; }
+    .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/foto23.jpeg') center/cover no-repeat; justify-content: center; }
+    .hero-card { text-align: center; }
 }
