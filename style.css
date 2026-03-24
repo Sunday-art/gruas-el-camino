@@ -3,7 +3,9 @@
 body { margin: 0; font-family: 'Montserrat', sans-serif; background: #000; color: #fff; }
 
 /* --- HEADER --- */
-.header { background: #000; border-bottom: 3px solid #FFD700; padding: 10px 5%; }
+.header { background: #000; border-bottom: 3px solid #FFD700; padding: 10px 5%; position: sticky;  /* Hace que se quede fijo al llegar arriba */
+    top: 0;           /* Lo pega al borde superior */
+    z-index: 1000;    /* Asegura que pase POR ENCIMA de las fotos y no por debajo */ }
 .header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
 .logo-main { font-size: 1.8rem; font-weight: 900; line-height: 0.9; display: block; }
 .logo-sub { color: #FFD700; font-weight: 700; font-size: 1rem; }
