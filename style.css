@@ -125,3 +125,12 @@ background: black;
 color: white;
 padding: 15px;
 }
+<section class="redes">
+    <h3>Síguenos</h3>
+
+    <a href="https://www.facebook.com/share/14ZQFT9Wizd/" target="_blank" class="fb-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+        Facebook
+    </a>
+</section>
+
