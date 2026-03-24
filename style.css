@@ -125,12 +125,36 @@ background: black;
 color: white;
 padding: 15px;
 }
-<section class="redes">
-    <h3>Síguenos</h3>
+.hero-top {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background: rgba(0,0,0,0.4);
+    padding: 8px 15px;
+    border-radius: 5px;
+}
 
-    <a href="https://www.facebook.com/share/14ZQFT9Wizd/" target="_blank" class="fb-link">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
-        Facebook
-    </a>
-</section>
+.redes {
+    text-align: center;
+    padding: 30px;
+}
+
+.fb-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    background: #1877f2;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.fb-link img {
+    width: 20px;
+}
 
