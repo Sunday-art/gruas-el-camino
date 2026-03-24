@@ -1,147 +1,117 @@
 body {
-margin: 0;
-font-family: 'Segoe UI';
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* HEADER */
 .header {
-display: flex;
-justify-content: space-between;
-padding: 15px;
-background: white;
-border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: white;
+    border-bottom: 1px solid #eee;
 }
 
-/* HERO */
+.logo-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+/* HERO - Ajustado para claridad y posición */
 .hero {
-  height: 90vh;
-  background: url('img/foto23.jpeg') center/cover no-repeat;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* Esto mueve el contenido hacia arriba */
-  padding-top: 50px; /* Añade un espacio opcional desde el borde superior */
+    height: 90vh;
+    background: url('img/foto23.jpeg') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Mueve el recuadro hacia arriba */
+    padding-top: 60px; /* Distancia desde el tope */
 }
 
 .overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: none; /* Eliminamos el fondo oscuro */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.1); /* Neblina casi eliminada (0.1) */
 }
 
 .hero-box {
-position: relative;
-background: rgba(0,0,0,0.6);
-padding: 30px;
-border-radius: 10px;
-text-align: center;
-color: white;
+    position: relative;
+    background: rgba(0,0,0,0.4); /* Fondo sutil para legibilidad */
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    max-width: 90%;
+}
+
+.hero-box h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem; /* Letra muy grande y llamativa */
+    text-transform: uppercase;
+    color: #FFD700; /* Amarillo "Grúa" muy llamativo */
+    margin: 0;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+}
+
+.hero-box p {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 10px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+}
+
+.sub-hero {
+    font-size: 1.1rem !important;
+    font-weight: normal !important;
+    opacity: 0.9;
 }
 
 /* BOTONES */
 .btn {
-padding: 12px 20px;
-margin: 5px;
-border-radius: 5px;
-color: white;
-text-decoration: none;
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 10px 5px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 .small { padding: 8px 12px; }
-
 .whatsapp { background: #25D366; }
 .call { background: #007BFF; }
+.whatsapp:hover, .call:hover { transform: scale(1.05); }
 
-/* SECCIONES */
-section {
-padding: 40px;
-text-align: center;
-}
+/* SECCIONES Y GRID */
+section { padding: 40px 20px; text-align: center; }
 
-/* GRID */
 .grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* CARD */
 .card {
-background: white;
-padding: 15px;
-border-radius: 10px;
-box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-img {
-width: 100%;
-border-radius: 10px;
-}
+img { width: 100%; border-radius: 10px; display: block; }
 
-/* TESTIMONIOS */
-.testimonios {
-background: #f4f4f4;
-}
-
-/* MAPA */
-iframe {
-width: 100%;
-height: 300px;
-border: none;
-}
-
-/* PAGOS */
-.pagos {
-background: #fafafa;
-}
-
-/* CTA */
-.cta {
-background: #111;
-color: white;
-}
-
-/* REDES */
-.redes {
-padding: 20px;
-}
-
-/* BOTÓN FLOTANTE */
-.float {
-position: fixed;
-bottom: 20px;
-right: 20px;
-background: #25D366;
-color: white;
-padding: 15px;
-border-radius: 50%;
-text-decoration: none;
-font-size: 20px;
-}
-
-/* FOOTER */
-footer {
-background: black;
-color: white;
-padding: 15px;
-}
-.hero-top {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    background: rgba(0,0,0,0.4);
-    padding: 8px 15px;
-    border-radius: 5px;
-}
-
-.redes {
-    text-align: center;
-    padding: 30px;
-}
+/* TESTIMONIOS, MAPA, OTROS */
+.testimonios { background: #f4f4f4; }
+iframe { width: 100%; height: 350px; border-radius: 15px; border: none; }
+.cta { background: #111; color: white; }
+.redes { padding: 40px; }
 
 .fb-link {
     display: inline-flex;
@@ -150,12 +120,29 @@ padding: 15px;
     text-decoration: none;
     background: #1877f2;
     color: white;
-    padding: 10px 15px;
-    border-radius: 6px;
+    padding: 12px 20px;
+    border-radius: 8px;
     font-weight: bold;
 }
+.fb-link img { width: 24px; }
 
-.fb-link img {
-    width: 20px;
+.float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
 }
+
+footer { background: black; color: white; padding: 20px; text-align: center; }
 
