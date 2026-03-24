@@ -6,7 +6,7 @@ body {
 /* HERO */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                url('img/foto1.jpeg') center/cover no-repeat;
+                url('img/foto2.jpeg') center/cover no-repeat;
     height: 90vh;
     color: white;
     display: flex;
