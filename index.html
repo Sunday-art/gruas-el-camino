@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grúas EL CAMINO | San Luis Potosí</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grúas EL CAMINO</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -25,32 +25,6 @@
     </div>
 </header>
 
-<section class="hero">
-    <div class="hero-wrapper">
-        <div class="hero-card">
-
-            <p>¿Tu auto se quedó varado?</p>
-            <h1 class="hero-t">¡No te preocupes!</h1>
-
-            <ul>
-                <li>✅ Servicio 24 horas</li>
-                <li>✅ Atención inmediata</li>
-                <li>✅ Traslados locales y foráneos</li>
-                <li>✅ Seguridad y confianza</li>
-                <li>✅ Personal capacitado</li>
-            </ul>
-
-            <h2 class="hero-tag">¡VAMOS QUE VOLAMOS!</h2>
-
-            <div class="hero-btns">
-                <a href="tel:4443338273" class="btn-y">LLAMAR</a>
-                <a href="https://wa.me/524443338273?text=Hola,%20necesito%20una%20grúa%20urgente" class="btn-w">WHATSAPP</a>
-            </div>
-
-        </div>
-    </div>
-</section>
-
 <section class="gallery-section">
     <h2 class="title-sec">Así trabajamos</h2>
 
@@ -59,7 +33,7 @@
         <button class="arrow left" onclick="scrollCarousel(-1)">❮</button>
 
         <div class="photo-grid" id="carousel">
-            <!-- duplicadas para efecto infinito -->
+
             <img src="img/foto22.jpeg">
             <img src="img/foto16.jpeg">
             <img src="img/foto24.jpeg">
@@ -74,14 +48,6 @@
             <img src="img/foto45.jpeg">
             <img src="img/foto46.jpeg">
 
-            <!-- duplicado -->
-            <img src="img/foto22.jpeg">
-            <img src="img/foto16.jpeg">
-            <img src="img/foto24.jpeg">
-            <img src="img/foto10.jpeg">
-            <img src="img/foto11.jpeg">
-            <img src="img/foto12.jpeg">
-            <img src="img/foto3.jpeg">
         </div>
 
         <button class="arrow right" onclick="scrollCarousel(1)">❯</button>
@@ -89,50 +55,43 @@
     </div>
 </section>
 
-<section class="map-section">
-    <h2 class="title-sec">Ubicación</h2>
-
-    <iframe 
-    src="https://www.google.com/maps?q=Circuito+San+Ignacio+117+Soledad+SLP&output=embed"
-    width="100%" height="300" style="border:0; border-radius:12px;">
-    </iframe>
-</section>
-
-<section class="fb-section">
-    <a href="https://www.facebook.com/share/1ELSNbrg76/" target="_blank" class="fb-mini-link">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg">
-        <span>Síguenos en Facebook</span>
-    </a>
-</section>
-
-<a href="https://wa.me/524443338273?text=Hola,%20necesito%20una%20grúa%20urgente"
-class="whatsapp-float">💬</a>
-
-<footer>
-    © 2026 Grúas EL CAMINO
-</footer>
-
 <script>
 const carousel = document.getElementById('carousel');
+const images = carousel.querySelectorAll('img');
 
-// inicio en medio para efecto infinito
-carousel.scrollLeft = carousel.scrollWidth / 2;
+let speed = 0.4;
 
-let speed = 0.3;
-
+/* AUTO SCROLL SUAVE */
 let autoScroll = setInterval(() => {
     carousel.scrollLeft += speed;
-
-    if (carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth) {
-        carousel.scrollLeft = carousel.scrollWidth / 2;
-    }
 }, 10);
 
-// pausa
-carousel.addEventListener('mouseenter', () => clearInterval(autoScroll));
-carousel.addEventListener('touchstart', () => clearInterval(autoScroll));
+/* DETECTAR IMAGEN CENTRAL */
+function updateCenter() {
+    let center = carousel.scrollLeft + carousel.offsetWidth / 2;
 
-// flechas
+    images.forEach(img => {
+        let imgCenter = img.offsetLeft + img.offsetWidth / 2;
+
+        if (Math.abs(center - imgCenter) < img.offsetWidth / 2) {
+            img.classList.add('active');
+        } else {
+            img.classList.remove('active');
+        }
+    });
+}
+
+carousel.addEventListener('scroll', updateCenter);
+
+/* PAUSA INTELIGENTE */
+carousel.addEventListener('mouseenter', () => clearInterval(autoScroll));
+carousel.addEventListener('mouseleave', () => {
+    autoScroll = setInterval(() => {
+        carousel.scrollLeft += speed;
+    }, 10);
+});
+
+/* FLECHAS */
 function scrollCarousel(direction) {
     carousel.scrollBy({
         left: direction * 300,
