@@ -79,29 +79,31 @@ body {
     border-left: 4px solid #FFD700;
 }
 
-/* GALERÍA CORREGIDA */
+/* GALERÍA (CUADROS IGUALES COMO ORIGINAL) */
 .gallery-section { padding: 60px; text-align: center; }
 
 .photo-grid {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* 🔥 IMÁGENES COMPLETAS */
 .photo-grid img {
     width: 100%;
-    height: auto; /* clave */
-    object-fit: contain; /* clave */
+    height: 280px;
+    object-fit: cover;
 
-    border-radius: 10px;
+    border-radius: 12px;
     border: 3px solid #222;
 
     transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
 }
 
-/* 🔥 EFECTO PREMIUM */
+/* EFECTO PREMIUM */
 .photo-grid img:hover {
-    transform: scale(1.07);
+    transform: scale(1.06);
     border-color: #FFD700;
     box-shadow: 0 15px 30px rgba(255, 215, 0, 0.4);
 }
@@ -115,14 +117,17 @@ body {
 .fb-mini-link {
     display: inline-flex;
     gap: 10px;
-    background: #1877f2;
+    background: rgba(24,119,242,0.1);
+    border: 1px solid #1877f2;
     padding: 10px 20px;
     color: #fff;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 50px;
 }
 
-.fb-mini-link img { width: 20px; }
+.fb-mini-link:hover {
+    background: #1877f2;
+}
 
 /* WHATSAPP */
 .whatsapp-float {
