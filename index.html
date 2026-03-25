@@ -45,7 +45,7 @@
             <div class="hero-btns">
                 <a href="tel:4443338273" class="btn-y">LLAMAR</a>
 
-                <a href="https://wa.me/524443338273?text=Hola,%20necesito%20una%20grúa%20urgente,%20me%20pueden%20apoyar"
+                <a href="https://wa.me/524443338273?text=Hola,%20necesito%20una%20grúa%20urgente"
                 class="btn-w">WHATSAPP</a>
             </div>
 
@@ -53,34 +53,31 @@
     </div>
 </section>
 
-<section class="testimonials">
-    <h2 class="title-sec">Clientes Satisfechos</h2>
-
-    <div class="test-grid">
-        <div class="t-item">"Excelente servicio, llegaron muy rápido."</div>
-        <div class="t-item">"Muy profesionales y precio justo."</div>
-        <div class="t-item">"Atención amable y confiable."</div>
-    </div>
-</section>
-
 <section class="gallery-section">
     <h2 class="title-sec">Así trabajamos</h2>
 
-    <div class="photo-grid">
-        <img src="img/foto22.jpeg">
-        <img src="img/foto16.jpeg">
-        <img src="img/foto24.jpeg">
-        <img src="img/foto10.jpeg">
-        <img src="img/foto11.jpeg">
-        <img src="img/foto12.jpeg">
-        <img src="img/foto3.jpeg">
+    <div class="carousel-wrapper">
 
-        <img src="img/foto41.jpeg">
-        <img src="img/foto42.jpeg">
-        <img src="img/foto43.jpeg">
-        <img src="img/foto44.jpeg">
-        <img src="img/foto45.jpeg">
-        <img src="img/foto46.jpeg">
+        <button class="arrow left" onclick="scrollCarousel(-1)">❮</button>
+
+        <div class="photo-grid" id="carousel">
+            <img src="img/foto22.jpeg">
+            <img src="img/foto16.jpeg">
+            <img src="img/foto24.jpeg">
+            <img src="img/foto10.jpeg">
+            <img src="img/foto11.jpeg">
+            <img src="img/foto12.jpeg">
+            <img src="img/foto3.jpeg">
+            <img src="img/foto41.jpeg">
+            <img src="img/foto42.jpeg">
+            <img src="img/foto43.jpeg">
+            <img src="img/foto44.jpeg">
+            <img src="img/foto45.jpeg">
+            <img src="img/foto46.jpeg">
+        </div>
+
+        <button class="arrow right" onclick="scrollCarousel(1)">❯</button>
+
     </div>
 </section>
 
@@ -89,17 +86,8 @@
 
     <iframe 
     src="https://www.google.com/maps?q=Circuito+San+Ignacio+117+Soledad+de+Graciano+Sanchez+SLP&output=embed"
-    width="100%" 
-    height="300" 
-    style="border:0; border-radius:12px;">
+    width="100%" height="300" style="border:0; border-radius:12px;">
     </iframe>
-</section>
-
-<section class="fb-section">
-    <a href="https://www.facebook.com/share/1ELSNbrg76/" target="_blank" class="fb-mini-link">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg">
-        <span>Síguenos en Facebook</span>
-    </a>
 </section>
 
 <a href="https://wa.me/524443338273?text=Hola,%20necesito%20una%20grúa%20urgente"
@@ -108,6 +96,27 @@ class="whatsapp-float">💬</a>
 <footer>
     © 2026 Grúas EL CAMINO - San Luis Potosí
 </footer>
+
+<!-- 🔥 SCRIPT CARRUSEL -->
+<script>
+const carousel = document.getElementById('carousel');
+
+let autoScroll = setInterval(() => {
+    carousel.scrollLeft += 1;
+}, 20);
+
+// PAUSA CUANDO TOCAN
+carousel.addEventListener('mouseover', () => clearInterval(autoScroll));
+carousel.addEventListener('touchstart', () => clearInterval(autoScroll));
+
+// FLECHAS
+function scrollCarousel(direction) {
+    carousel.scrollBy({
+        left: direction * 300,
+        behavior: 'smooth'
+    });
+}
+</script>
 
 </body>
 </html>
