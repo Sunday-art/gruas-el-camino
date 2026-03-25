@@ -2,27 +2,38 @@
 
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Grúas EL CAMINO</title>
+
+<!-- SEO -->
+
+<title>Grúas en San Luis Potosí 24 horas | Servicio urgente - Grúas El Camino</title>
+
+<meta name="description" content="Servicio de grúas en San Luis Potosí 24 horas. Atención inmediata, traslados locales y foráneos. Llámanos o envía WhatsApp ahora.">
+<meta name="keywords" content="grúas en San Luis Potosí, grúas 24 horas, grúa urgente, servicio de grúa cerca de mí, grúas Soledad SLP">
+
+<meta name="geo.region" content="MX-SLP">
+<meta name="geo.placename" content="San Luis Potosí">
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
 <header class="header">
     <div class="header-container">
-        <div>
+        <div class="logo-box">
             <span class="logo-main">GRÚAS</span>
             <span class="logo-sub">EL CAMINO</span>
         </div>
 
 ```
-    <div>
+    <div class="header-info">
         <a href="tel:4443338273" class="phone-link">444 333 8273</a>
-        <div class="status-247">SERVICIO 24 HORAS</div>
+        <span class="status-247">SERVICIO 24 HORAS</span>
     </div>
 </div>
 ```
@@ -36,28 +47,39 @@
         <div class="hero-card">
 
 ```
-        <p>¿Tu auto se quedó varado?</p>
-        <h1 class="hero-t">¡No te preocupes!</h1>
+        <p class="hero-q">¿Tu auto se quedó varado?</p>
+        <h1 class="hero-t">Servicio de grúas en San Luis Potosí 24 horas</h1>
 
-        <ul>
-            <li>✅ Servicio 24 horas</li>
+        <ul class="hero-items">
             <li>✅ Atención inmediata</li>
+            <li>✅ Servicio urgente</li>
             <li>✅ Traslados locales y foráneos</li>
             <li>✅ Seguridad y confianza</li>
             <li>✅ Personal capacitado</li>
         </ul>
 
-        <h2 class="hero-tag">¡VAMOS QUE VOLAMOS!</h2>
+        <h2 class="hero-tag">¡Llegamos rápido!</h2>
 
         <div class="hero-btns">
-            <a href="tel:4443338273" class="btn-y">LLAMAR</a>
-            <a href="https://wa.me/524443338273?text=Hola,%20necesito%20una%20grúa%20urgente" class="btn-w">WHATSAPP</a>
+            <a href="tel:4443338273" class="btn-y">LLAMAR: 444 333 8273</a>
+            <a href="https://wa.me/524443338273?text=Hola,%20necesito%20una%20grúa%20urgente%20en%20San%20Luis%20Potosí" class="btn-w">WHATSAPP</a>
         </div>
 
     </div>
 </div>
 ```
 
+</section>
+
+<!-- TEXTO SEO (NO SE VE MUCHO PERO POSICIONA) -->
+
+<section class="seo-text" style="padding:40px 5%; max-width:900px; margin:auto; text-align:center;">
+    <h2 style="color:#FFD700;">Servicio de grúas en San Luis Potosí</h2>
+    <p>
+    En Grúas El Camino ofrecemos servicio de grúas en San Luis Potosí disponible las 24 horas del día. 
+    Brindamos atención inmediata para vehículos varados, accidentes o traslados locales y foráneos. 
+    Nos especializamos en servicio rápido, seguro y profesional en toda la zona de Soledad y alrededores.
+    </p>
 </section>
 
 <!-- GALERÍA -->
@@ -109,21 +131,21 @@
 
 <section class="fb-section">
     <a href="https://www.facebook.com/share/14ZQFT9Wizd/" target="_blank" class="fb-mini-link">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="Facebook">
         <span>Síguenos en Facebook</span>
     </a>
 </section>
 
-<!-- WHATSAPP FLOTANTE -->
+<!-- WHATSAPP -->
 
 <a href="https://wa.me/524443338273?text=Hola,%20necesito%20una%20grúa%20urgente"
 class="whatsapp-float">💬</a>
 
 <footer>
-    © 2026 Grúas EL CAMINO
+    © 2026 Grúas El Camino | Servicio de grúas en San Luis Potosí
 </footer>
 
-<!-- SCRIPT PRO -->
+<!-- SCRIPT (YA CORREGIDO Y FLUIDO) -->
 
 <script>
 const carousel = document.getElementById('carousel');
@@ -131,13 +153,13 @@ const images = carousel.querySelectorAll('img');
 
 let speed = 1.2;
 
-/* AUTO SCROLL */
+/* MOVIMIENTO AUTOMÁTICO FLUIDO */
 let autoScroll = setInterval(() => {
     carousel.scrollLeft += speed;
     updateCenter();
 }, 16);
 
-/* CENTRO */
+/* DETECTAR IMAGEN CENTRAL */
 function updateCenter() {
     let center = carousel.scrollLeft + carousel.offsetWidth / 2;
 
@@ -163,3 +185,4 @@ function scrollCarousel(direction) {
 
 </body>
 </html>
+
