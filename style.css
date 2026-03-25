@@ -79,31 +79,44 @@ body {
     border-left: 4px solid #FFD700;
 }
 
-/* GALERÍA (CUADROS IGUALES COMO ORIGINAL) */
+/* 🔥 CARRUSEL HORIZONTAL */
 .gallery-section { padding: 60px; text-align: center; }
 
 .photo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 10px 0;
+
+    scroll-snap-type: x mandatory;
 }
 
+/* SCROLL BONITO */
+.photo-grid::-webkit-scrollbar {
+    height: 6px;
+}
+.photo-grid::-webkit-scrollbar-thumb {
+    background: #FFD700;
+    border-radius: 10px;
+}
+
+/* IMÁGENES */
 .photo-grid img {
-    width: 100%;
-    height: 280px;
+    flex: 0 0 220px;
+    height: 220px;
     object-fit: cover;
 
     border-radius: 12px;
     border: 3px solid #222;
+
+    scroll-snap-align: center;
 
     transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
 }
 
 /* EFECTO PREMIUM */
 .photo-grid img:hover {
-    transform: scale(1.06);
+    transform: scale(1.08);
     border-color: #FFD700;
     box-shadow: 0 15px 30px rgba(255, 215, 0, 0.4);
 }
